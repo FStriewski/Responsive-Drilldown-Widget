@@ -17,6 +17,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Route exact path="/" render={() => <Redirect to="/drilldown" />} />
           <Route exact path="/drilldown" component={Drilldown} />
 
           <Route exact path="/panel" component={ControlledExpansionPanels} /> 
