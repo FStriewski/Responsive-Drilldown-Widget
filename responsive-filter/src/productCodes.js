@@ -13,7 +13,7 @@ export const vegetables =
         {Pepper:  " 0709601000"}
     ]
 
-export const fruitNuts =
+export const fruits =
     [
         {Papayas:  " 0807200000"},
         {Avocados:  " 0804400000"},
@@ -34,7 +34,7 @@ export const fruitNuts =
 
     ]
 
-export const beansCrop =
+export const beans =
     [
         {Coffee_n_roasted :  " 090111000"},
         {Coffee_n_roasted_decaf:  " 090112000"},
