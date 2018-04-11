@@ -17,28 +17,39 @@ export default class Drilldown extends PureComponent {
         return (
 
             <div>
-                <ul class="vertical menu drilldown" data-drilldown>
+                <ul className="vertical menu drilldown" data-drilldown>
                     <li>
                         <a href="#"> Vegetables   </a>
-                        <ul class="menu vertical nested">
+                        <ul className="menu vertical nested">
                             { vegetables.map(  veg => 
-                                        <li>
-                                            <a href="#">
-                                                {Object.getOwnPropertyNames(veg)}
-                                            </a>
-                                        </li>
-                            
+                                <li key={Object.getOwnPropertyNames(veg)}>
+                                <button name={Object.values(veg)[0]} 
+                                className="button"
+                                value= {Object.getOwnPropertyNames(veg)}
+                                type="button"
+                                onClick={console.log("")}
+                                    >
+                                    {Object.getOwnPropertyNames(veg)}
+                                            
+                                </button>
+                            </li>
                             )}
                         </ul>
                     </li>
                     <li>
                         <a href="#"> Fruits & Nuts   </a>
-                        <ul class="menu vertical nested">
+                        <ul className="menu vertical nested">
                             {fruits.map(fruit =>
-                                <li>
-                                    <a href="#">
+                                <li key={Object.getOwnPropertyNames(fruit)}>
+                                    <button name={Object.values(fruit)[0]}
+                                        className="button"
+                                        value={Object.getOwnPropertyNames(fruit)}
+                                        type="button"
+                                        onClick={console.log("")}
+                                    >
                                         {Object.getOwnPropertyNames(fruit)}
-                                    </a>
+
+                                    </button>
                                 </li>
 
                             )}
@@ -46,12 +57,18 @@ export default class Drilldown extends PureComponent {
                     </li>
                     <li>
                         <a href="#"> Beans & Crop   </a>
-                        <ul class="menu vertical nested">
+                        <ul className="menu vertical nested">
                             {beans.map(bean =>
-                                <li>
-                                    <a href="#">
+                                <li key={Object.getOwnPropertyNames(bean)}>
+                                    <button name={Object.values(bean)[0]}
+                                        className="button"
+                                        value={Object.getOwnPropertyNames(bean)}
+                                        type="button"
+                                        onClick={console.log("")}
+                                    >
                                         {Object.getOwnPropertyNames(bean)}
-                                    </a>
+
+                                    </button>
                                 </li>
 
                             )}
